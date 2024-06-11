@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application</title>
+    <!-- i have Link to the CSS file by below tag -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Loan Application</h1>
+     <!--I have created Form for loan application -->
+    <form id="loanForm">
+        <!-- Full Name input field with validation -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <span id="fullNameError" class="error"></span>
+
+        <!-- Email input field with validation -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError" class="error"></span>
+
+        <!-- PAN input field with validation -->
+        <label for="pan">PAN:</label>
+        <input type="text" id="pan" name="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]" title="Format: ABCDE1234F">
+        <span id="panError" class="error"></span>
+
+        <!-- Loan Amount input field with validation -->
+        <label for="loanAmount">Loan Amount:</label>
+        <input type="number" id="loanAmount" name="loanAmount" min="1" max="999999999" required>
+        <span id="loanAmountError" class="error"></span>
+        <p id="estimatedEMI"></p>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+    <!-- Link to the JavaScript file by below tag -->
+    <script src="script.js"></script>
+</body>
+</html>
